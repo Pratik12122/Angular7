@@ -1,0 +1,8 @@
+<input
+type="text"
+placeholder="enter username here!"
+[(ngModel)]="username">
+
+<p>username is: {{username}}</p>
+
+<button class="btn btn-primary" [disabled]="username === '' " (click)="onReset()" >Reset</button>

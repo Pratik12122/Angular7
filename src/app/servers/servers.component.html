@@ -1,0 +1,21 @@
+<app-server></app-server>
+<app-server></app-server>
+
+<p>{{serverStatus}}</p>
+<button
+type="button"
+[disabled] = "!allNewServer"
+(click)="stratServer()"
+class="btn btn-primary">{{btnstatus}}</button>
+
+<hr>
+
+<input type="text"
+class="form-control"
+placeholder="event binding"
+(input)="onUpdateServerName($event)" >
+
+<input type="text"
+class="form-control"
+placeholder="Two Way Binding"
+[(ngModel)]="servername" >
